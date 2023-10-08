@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 import styles from "./Header.module.css"
 
@@ -10,20 +10,12 @@ export default function Header() {
           <Link to="/">SCart</Link>
         </h2>
 
-        <ul>
-          <li>
+        <div>
             <Link to="categories">Categories</Link>
-          </li>
-          <li>
             <Link to="all-products">All Products</Link>
-          </li>
-          <li>
             <Link to="shopping-cart">Shopping Cart</Link>
-          </li>
-        </ul>
+        </div>
       </header>
-
-      <Outlet />
     </>
   )
 }

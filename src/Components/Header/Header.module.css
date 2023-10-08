@@ -1,7 +1,7 @@
     .header {
         display: flex;
         justify-content: space-between;
-        padding: 1rem;
+        padding: 0rem 0rem;
         align-items: center;
 
         & h2 a {
@@ -16,24 +16,24 @@
 
 
 
-        & ul {
+        & div {
             display: flex;
 
-            & li {
-                list-style-type: none;
+            & a {
+                color: var(--main-header-color);
+                text-decoration: none;
+                text-transform: uppercase;
                 padding: 1rem;
-
-                & a {
-
-                    color: var(--main-header-color);
-                    text-decoration: none;
-                }
-
-                & a:hover {
-                    color: var(--main-header-color-hover);
-                    text-decoration: underline;
-                }
             }
 
+            & a:last-child {
+                padding-right: 0;
+            }
+
+            & a:hover {
+                color: var(--main-header-color-hover);
+                text-decoration: underline;
+
+            }
         }
     }
