@@ -11,7 +11,6 @@ export default function Header() {
         </h2>
 
         <div>
-            <Link to="categories">Categories</Link>
             <Link to="all-products">All Products</Link>
             <Link to="shopping-cart">Shopping Cart</Link>
         </div>
