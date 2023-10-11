@@ -1,8 +1,7 @@
-# React + Vite
+# Shopping Cart Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I have developed a functional Shopping Cart website using React and React Router DOM. While this project served as a valuable learning experience, there are areas that could benefit from further refinement.
 
-Currently, two official plugins are available:
+The website's design, while functional, has room for improvement. During the development process, I had the opportunity to explore and implement new techniques, such as leveraging `useOutletContext` and employing various approaches with React Router DOM.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Link to the live website: [Shopping Cart](https://shopping-cart-vas.netlify.app/)
