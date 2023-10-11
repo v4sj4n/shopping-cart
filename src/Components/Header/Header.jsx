@@ -6,9 +6,12 @@ import { mdiShopping } from "@mdi/js"
 import styles from "./Header.module.css"
 
 export default function Header(props) {
-  let sum = props.sItems.reduce(function (accumulator, curValue) {
-    return accumulator + curValue.count
-  }, 0)
+  let sum = 0
+  if (props.sItems.length > 0) {
+    sum = props.sItems.reduce(function (accumulator, curValue) {
+      return accumulator + curValue.count
+    }, 0)
+  }
   return (
     <>
       <header className={styles.header}>
