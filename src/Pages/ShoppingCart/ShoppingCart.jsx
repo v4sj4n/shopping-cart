@@ -29,21 +29,26 @@ export default function ShoppingCart() {
           <Link to={"/"}>main page</Link>
         </p>
       )}
-      {totalSumToPay > 0 ?  (
+      {totalSumToPay > 0 ? (
         <h3>
           TOTAL: {"    "}
           <span>{totalSumToPay}€</span>
         </h3>
-      ): 
-      ( <h3>Or go see all the products by clicking "All Products" on the navbar</h3>)}
+      ) : (
+        <h3>
+          Or go see all the products by clicking "All Products" on the navbar
+        </h3>
+      )}
 
-      <a
-        target="blank"
-        href="https://www.youtube.com/watch?v=Tt7bzxurJ1I"
-        onClick={() => clearProducts(0)}
-      >
-        Buy Now
-      </a>
+      {products.length > 0 && (
+        <a
+          target="blank"
+          href="https://www.youtube.com/watch?v=Tt7bzxurJ1I"
+          onClick={() => clearProducts(0)}
+        >
+          Buy Now
+        </a>
+      )}
     </div>
   )
 }
