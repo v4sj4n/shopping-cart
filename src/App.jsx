@@ -67,7 +67,11 @@ export default function App() {
           <p>Encountered a network error</p>
         ) : (
           <Outlet
-            context={{ products: sCartItems, addProduct: setSCartItemsHandler }}
+            context={{
+              products: sCartItems,
+              addProduct: setSCartItemsHandler,
+              clearProducts: setSCartItems,
+            }}
           />
         )}
       </div>
