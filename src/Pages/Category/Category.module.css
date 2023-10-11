@@ -2,5 +2,9 @@
     & > h2 {
         text-transform: capitalize;
     }
+    & a ~ h4 {
+        margin: 0rem auto 3rem auto;
+        color: rgb(129, 255, 129);
+    }
 
 }

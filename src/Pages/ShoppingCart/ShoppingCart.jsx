@@ -5,6 +5,9 @@ import { Link } from "react-router-dom"
 
 export default function ShoppingCart() {
   const { products, clearProducts } = useOutletContext()
+  const totalSumToPay = products.reduce(function (accumulator, curValue) {
+    return accumulator + curValue.count * curValue.price
+  }, 0)
 
   return (
     <div className={styles.shoppingCart}>
@@ -26,6 +29,14 @@ export default function ShoppingCart() {
           <Link to={"/"}>main page</Link>
         </p>
       )}
+      {totalSumToPay > 0 ?  (
+        <h3>
+          TOTAL: {"    "}
+          <span>{totalSumToPay}€</span>
+        </h3>
+      ): 
+      ( <h3>Or go see all the products by clicking "All Products" on the navbar</h3>)}
+
       <a
         target="blank"
         href="https://www.youtube.com/watch?v=Tt7bzxurJ1I"

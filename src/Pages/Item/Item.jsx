@@ -59,6 +59,8 @@ export default function Item() {
 
             addProduct(elToAdd)
             setCount(1)
+            const inp = document.querySelector("input")
+            inp.value = 1
           }}
         >
           Add item
