@@ -5,7 +5,7 @@
   font-family: "Titillium Web", sans-serif;
 
   --main-header-color: rgb(255, 255, 255);
-  --main-header-color-hover: rgb(202, 202, 202);
+  --main-header-color-hover: salmon
 }
 
 html, body{

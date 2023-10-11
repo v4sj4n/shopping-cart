@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useParams, useOutletContext } from "react-router-dom"
 import styles from "./Category.module.css"
 import useDataFetcher from "../../utils/useDataFetcher"
 import Card from "../../Components/Card/Card"
@@ -6,11 +6,13 @@ import Card from "../../Components/Card/Card"
 export default function Categories() {
   const { categoryName } = useParams()
 
+  const { addProduct } = useOutletContext()
+
+
   const { data, error, loading } = useDataFetcher(
     `https://fakestoreapi.com/products/category/${categoryName}`
   )
 
-  console.log(data)
 
   if (loading) return <p>Loading...</p>
   if (error)
@@ -29,10 +31,14 @@ export default function Categories() {
             data.map((el) => (
               <Card
                 key={el.id}
+                id={el.id}
                 title={el.title}
                 imageSrc={el.image}
-                category={el.category}
                 price={el.price}
+                addToCart={() => {
+                  const elToAdd = {id: el.id, title: el.title, imageSrc: el.image, category: el.category, price: el.price, count: 1}
+                  addProduct(elToAdd)
+                }}
               />
             ))}
         </div>

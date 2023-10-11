@@ -1,0 +1,26 @@
+.shoppingCart{
+    > h2{
+        font-size: 2rem;
+
+    }
+    & > p a{
+        text-decoration: none;
+        color: salmon;
+        cursor: pointer;
+    }
+
+    &  a:last-child {
+        background-color: salmon;
+        padding: 1rem 2rem;
+        color: white;
+        font-weight: 700;
+        font-size: 1.5rem;
+        border-radius: 4wpx;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+    &  a:last-child:hover {
+        background-color: rgb(177, 122, 116);
+        color: white;
+    }
+}

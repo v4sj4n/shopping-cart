@@ -15,10 +15,30 @@
 
         & p {
             margin-top: 0;
+            text-transform: uppercase;
         }
 
         & h4 {
             font-size: 3rem;
         }
+    }
+
+     > div > a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+    }
+     > div > a:hover{
+        color: rgb(194, 194, 194);
+        text-decoration: underline;
+    }
+
+    & button{
+        background-color: salmon;
+        padding: 1rem 2rem;
+        border: none;
+        font-weight: 700;
+        border-radius: 4px;
+        cursor: pointer;
     }
 }

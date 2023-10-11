@@ -32,8 +32,17 @@
 
             & a:hover {
                 color: var(--main-header-color-hover);
-                text-decoration: underline;
-
             }
         }
+
+        & span {
+            position: absolute;
+            border-radius: 1rem;
+            background-color: white;
+            color: salmon;
+            font-size: 0.8rem;
+            transform: translate(-15px, 20px);
+            padding: 0.1rem 0.5rem;
+        }
+
     }

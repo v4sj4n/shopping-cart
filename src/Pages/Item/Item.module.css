@@ -1,0 +1,46 @@
+    .item {
+        display: flex;
+        flex-direction: row !important;
+
+        & img {
+            width: 333px;
+            margin-right: 5rem;
+        }
+
+        & input {
+            width: 5rem
+        }
+
+        ;
+
+    }
+
+    .belowItem {
+        display: flex;
+        flex-direction: column;
+
+        & a {
+            background-color: salmon;
+            width: 4rem;
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        > div input{
+            border: none;
+            color: salmon;
+            font-weight: 700;
+            text-align: center;
+            width: 6rem;
+            padding: 1rem;
+            border-radius: 4px;
+        }
+        > div p {
+            font-weight: 700;
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+    }

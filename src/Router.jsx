@@ -3,6 +3,7 @@ import App from "./App"
 import AllProducts from "./Pages/AllProducts/AllProducts"
 import Category from "./Pages/Category/Category"
 import ShoppingCart from "./Pages/ShoppingCart/ShoppingCart"
+import Item from "./Pages/Item/Item"
 
 export default function Router() {
   const router = createBrowserRouter([
@@ -14,6 +15,10 @@ export default function Router() {
         {
           path: "category/:categoryName",
           element: <Category />,
+        },
+        {
+          path: "product/:itemID",
+          element: <Item />,
         },
         { path: "shopping-cart", element: <ShoppingCart /> },
       ],

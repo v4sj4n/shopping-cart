@@ -10,7 +10,7 @@ export default function useDataFetcher(url) {
       await fetch(url, { mode: "cors" })
         .then((response) => response.json())
         .then((response) => {
-          if (response.length > 1) {
+          if (Object.keys(response).length > 0) {
             setData(response)
             setLoading(false)
           } else {
