@@ -1,13 +1,15 @@
-import styles from "./ShoppingCart.module.css"
-import { useOutletContext } from "react-router-dom"
-import Card from "../../Components/Card/Card"
-import { Link } from "react-router-dom"
+import styles from './ShoppingCart.module.css'
+import { useOutletContext } from 'react-router-dom'
+import Card from '../../Components/Card/Card'
+import { Link } from 'react-router-dom'
 
 export default function ShoppingCart() {
   const { products, clearProducts } = useOutletContext()
-  const totalSumToPay = products.reduce(function (accumulator, curValue) {
-    return accumulator + curValue.count * curValue.price
-  }, 0)
+  const totalSumToPay = Array.isArray(products)
+    ? products.reduce(function (accumulator, curValue) {
+        return accumulator + curValue.count * curValue.price
+      }, 0)
+    : 0
 
   return (
     <div className={styles.shoppingCart}>
@@ -25,13 +27,13 @@ export default function ShoppingCart() {
         ))
       ) : (
         <p>
-          You have selected no items, go back to the{" "}
-          <Link to={"/"}>main page</Link>
+          You have selected no items, go back to the{' '}
+          <Link to={'/'}>main page</Link>
         </p>
       )}
       {totalSumToPay > 0 ? (
         <h3>
-          TOTAL: {"    "}
+          TOTAL: {'    '}
           <span>{totalSumToPay}€</span>
         </h3>
       ) : (
@@ -42,8 +44,8 @@ export default function ShoppingCart() {
 
       {products.length > 0 && (
         <a
-          target="blank"
-          href="https://www.youtube.com/watch?v=Tt7bzxurJ1I"
+          target='blank'
+          href='https://www.youtube.com/watch?v=Tt7bzxurJ1I'
           onClick={() => clearProducts(0)}
         >
           Buy Now
