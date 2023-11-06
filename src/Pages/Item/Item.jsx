@@ -1,7 +1,7 @@
-import { useOutletContext, useParams } from "react-router-dom"
-import useDataFetcher from "../../utils/useDataFetcher.jsx"
-import { useState } from "react"
-import styles from "./Item.module.css"
+import { useOutletContext, useParams } from 'react-router-dom'
+import useDataFetcher from '../../utils/useDataFetcher.jsx'
+import { useState } from 'react'
+import styles from './Item.module.css'
 export default function Item() {
   const { itemID } = useParams()
 
@@ -33,14 +33,14 @@ export default function Item() {
           <p>
             Rating: <strong>{data.rating.rate}</strong>
           </p>
-          <h4>{data.price}</h4>
+          <h4>{data.price}€</h4>
         </div>
       </div>
       <div className={styles.belowItem}>
         <div>
           <p>How many</p>
           <input
-            type={"number"}
+            type={'number'}
             placeholder={count}
             min={1}
             onChange={(e) => countHandler(Number(e.target.value))}
@@ -59,7 +59,7 @@ export default function Item() {
 
             addProduct(elToAdd)
             setCount(1)
-            const inp = document.querySelector("input")
+            const inp = document.querySelector('input')
             inp.value = 1
           }}
         >

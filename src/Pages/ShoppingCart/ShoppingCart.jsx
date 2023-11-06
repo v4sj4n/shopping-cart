@@ -38,7 +38,8 @@ export default function ShoppingCart() {
         </h3>
       ) : (
         <h3>
-          Or go see all the products by clicking "All Products" on the navbar
+          Or go see all the products by clicking &ldquo;All Products&ldquo; on
+          the navbar
         </h3>
       )}
 
